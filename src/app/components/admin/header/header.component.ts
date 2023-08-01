@@ -5,6 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { LogoComponent } from '../../shared/logo/logo.component';
 import { AuthService } from 'src/app/services/auth.service';
 import { CommonModule } from '@angular/common';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @Component({
   selector: 'app-header',
@@ -17,6 +18,7 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     MatIconModule,
     LogoComponent,
+    AppRoutingModule
   ],
 })
 export class HeaderComponent implements OnInit {
