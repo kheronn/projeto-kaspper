@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { EMPTY, Observable } from 'rxjs';
 import { Usuario } from '../models/usuario.model';
-import { Observable } from 'rxjs';
-
+ 
 @Injectable({
   providedIn: 'root',
 })
@@ -10,6 +11,8 @@ export class UsuariosService {
   private API_USUARIO = 'http://localhost:8080/usuarios';
 
   http = inject(HttpClient);
+  snackBar = inject(MatSnackBar);
+
 
   getUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.API_USUARIO);
@@ -23,7 +26,22 @@ export class UsuariosService {
     return this.http.put(this.API_USUARIO, data);
   }
 
-  delete(id:string){
-    return this.http.delete(`${this.API_USUARIO}/${id}`);
+  delete(id: string) {
+    return this.http.delete(`${this.API_USUARIO}/${id}`,{responseType: 'text'});
   }
+
+  showMessage(msg: string, isError: boolean = false): void {
+    this.snackBar.open(msg, 'X', {
+      duration: 3000,
+      horizontalPosition:  'center',
+      verticalPosition: 'bottom',
+      panelClass: isError ? ['msg-error'] : ['msg-success'],
+    });
+  }
+
+  errorHandler(e: any): Observable<any> {
+    this.showMessage('Ocorreu um erro!', true);
+    return EMPTY;
+  }
+
 }

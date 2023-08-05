@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/admin/header/header.component';
 import { FooterComponent } from './components/admin/footer/footer.component';
 import { LoginComponent } from "./components/login/login.component";
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
         HeaderComponent,
         FooterComponent,
         BrowserAnimationsModule,
-        LoginComponent
+        LoginComponent,
+        MatSnackBarModule
     ]
 })
 export class AppModule { }
