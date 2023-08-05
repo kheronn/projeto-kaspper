@@ -1,27 +1,55 @@
-# ProjetoKaspper
+# Projeto Angular consumo de APIS 💳
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+Repositório de estudo sobre o Angular 16 e consumo de API, desenvolvido em aulas para o projeto Kaspper Academy - Turma 2/2023.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O Projeto possui uma página de login, home e usuários. Utiliza o HTTP Client  do Angular para lidar com requisições HTTP, além de Reactive Forms para trabalhar com formulários de modo reativo. Possui um CRUD para uma API de usuários implementada utilizando o SPRING BOOT em Java.
 
-## Code scaffolding
+<p align="center">
+    <kbd>
+        <img src="/src/assets/images/print1.PNG"style="border-radius: 5px" alt="home" width="710">
+    </kbd>
+</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 📚 Tecnologias
 
-## Build
+- Angular 16
+- Angular Material
+- Sweetalert
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## 🎁 Features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+-  **HTTP Client** e **Observables**  para requisições HTTP;
+- Componentes do **Angular Material** 
+- **inject**
+- **signal()** para reatividade
+- **Reactive Forms**
+- Autenticação com LocalStorage
+- Components
+- Services
+- Routers
+- Guards
 
-## Running end-to-end tests
+## Passos no ambiente de desenvolvimento
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Baixe as dependências com o `npm install`
 
-## Further help
+Execute o comando `ng serve` para iniciar o servidor Angular no ambiente de desenvolvimento. Depois abra a seguinte URL `http://localhost:4200/` para testar aplicação.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Execute o Spring Boot para iniciar a API
+
+### Home da Aplicação
+
+
+### Página de Usuário
+
+<p align="center">
+<span align="center">
+    <kbd>
+        <img src="src/assets/images/print2.PNG"style="border-radius: 5px" alt="Website" height="340">
+    </kbd>
+</span>
+
+
+
